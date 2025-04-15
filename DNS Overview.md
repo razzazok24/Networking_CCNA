@@ -41,7 +41,7 @@ Key Features of DNS in Data Centers:
 
 ## Types of DNS in Data Centers
 
-![Types of DNS](./assets/types-of-dns.png)
+![Types of DNS]([./assets/types-of-dns.png](https://github.com/razzazok24/Networking_CCNA/blob/main/images/ChatGPT%20Image%20Apr%2015,%202025,%2001_27_39%20AM.png?raw=true))
 
 ### 1. Recursive DNS
 - Performs full resolution on behalf of the client.
