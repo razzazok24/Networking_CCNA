@@ -1,4 +1,4 @@
-# DNS for Data Center Engineers
+# DNS in Data Center 
 
 ![DNS Overview](./assets/dns-overview.png)
 
