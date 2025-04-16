@@ -1,6 +1,6 @@
 # DNS in Data Center 
 
-![DNS Overview](./assets/dns-overview.png)
+![DNS Overview](https://github.com/razzazok24/Networking_CCNA/blob/main/images/ChatGPT%20Image%20Apr%2016,%202025,%2002_00_59%20AM.png?raw=true)
 
 ## Overview
 
@@ -14,9 +14,79 @@ Key Features of DNS in Data Centers:
 
 ---
 
+## 🌐 What is a TLD Name Server?
+
+A **TLD (Top-Level Domain) Name Server** is a critical part of the Domain Name System (DNS) hierarchy. It is responsible for managing domains that share the same top-level domain, such as:
+
+- `.com`
+- `.net`
+- `.org`
+- `.gov`
+- `.edu`
+- Country-specific TLDs like `.uk`, `.fr`, `.dz`
+
+---
+
+### 🔸 What Does a TLD Name Server Do?
+
+TLD name servers receive DNS queries **from root servers** and forward them to the correct **authoritative name servers**.
+
+For example, resolving:
+
+```
+www.example.com
+```
+
+Involves:
+
+1. **Root Name Server**:  
+   Responds with the address of the `.com` TLD name server.
+
+2. **TLD Name Server for `.com`**:  
+   Responds with the address of the authoritative DNS server for `example.com`.
+
+3. **Authoritative DNS Server**:  
+   Responds with the IP address of `www.example.com`.
+
+---
+
+### 🧱 DNS Hierarchy Summary
+
+| Level         | Function                                         | Example                  |
+|---------------|--------------------------------------------------|--------------------------|
+| Root Servers  | Delegate to TLD servers                          | `.` (root)               |
+| TLD Servers   | Delegate to authoritative servers by TLD         | `.com`, `.net`, `.dz`    |
+| Authoritative | Provide final DNS record for the requested name | `example.com → A record` |
+
+---
+
+### 🧪 Example: DNS Trace with `dig`
+
+You can use the following command to see the full DNS resolution path:
+
+```bash
+dig +trace www.google.com
+```
+
+**Output Explanation:**
+- Starts at the root (`.`)
+- Then queries the `.com` TLD name server
+- Finally contacts Google's authoritative server
+
+---
+
+### 📌 Why It Matters in a Data Center
+
+- **DNS latency** can be reduced by caching TLD responses.
+- Understanding delegation helps troubleshoot resolution failures.
+- Misconfigured TLD references in private DNS setups can break internal/external lookups.
+
+
+
+---
 ## DNS Query Process (Full Resolution Path)
 
-![DNS Resolution Path](./assets/dns-overview.png)
+![DNS Resolution Path](https://github.com/razzazok24/Networking_CCNA/blob/main/images/ChatGPT%20Image%20Apr%2016%2C%202025%2C%2002_05_45%20AM.png)
 
 1. **Client Resolver (Stub)**:
    - Initiates a request to resolve a domain.
@@ -41,7 +111,7 @@ Key Features of DNS in Data Centers:
 
 ## Types of DNS in Data Centers
 
-![Types of DNS](https://github.com/razzazok24/Networking_CCNA/blob/main/images/ChatGPT%20Image%20Apr%2015,%202025,%2001_27_39%20AM.png)
+![Types of DNS](https://github.com/razzazok24/Networking_CCNA/blob/main/images/ChatGPT%20Image%20Apr%2015,%202025,%2001_27_58%20AM.png?raw=true)
 
 ### 1. Recursive DNS
 - Performs full resolution on behalf of the client.
