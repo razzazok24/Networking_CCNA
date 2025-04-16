@@ -94,7 +94,7 @@ Key Features of DNS in Data Centers:
 
 ## DNS Troubleshooting in a Data Center
 
-![DNS Troubleshooting]([./assets/dns-troubleshooting.png](https://github.com/razzazok24/Networking_CCNA/blob/main/images/ChatGPT%20Image%20Apr%2015,%202025,%2001_27_39%20AM.png?raw=true)
+![DNS Troubleshooting]([./assets/dns-troubleshooting.png](https://raw.githubusercontent.com/razzazok24/Networking_CCNA/refs/heads/main/images/ChatGPT%20Image%20Apr%2015%2C%202025%2C%2001_27_39%20AM.png)
 
 ### Step-by-Step Workflow
 
